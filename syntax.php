@@ -315,7 +315,7 @@ class syntax_plugin_yearbox extends DokuWiki_Syntax_Plugin
             $this->getLang('yearbox_months_sep'),
             $this->getLang('yearbox_months_oct'),
             $this->getLang('yearbox_months_nov'),
-            $this->getLang('yearbox_months_dev'),
+            $this->getLang('yearbox_months_dec'),
         ];
         $alt_css = ($mth_num % 2 == 0) ? ' class="alt"' : '';
         return '<th' . $alt_css . '>' . $month_names[$mth_num - 1] . '</th>';
