@@ -1,5 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
+namespace dokuwiki\plugin\yearbox\test;
+
+use DokuWikiTest;
 
 /**
  * Tests from syntax to html for the yearbox plugin
@@ -7,11 +12,11 @@
  * @group plugin_yearbox
  * @group plugins
  */
-class html_plugin_yearbox_test extends \DokuWikiTest
+final class SyntaxTest extends DokuWikiTest
 {
     protected $pluginsEnabled = ['yearbox'];
 
-    public function test_jan2018_simple()
+    public function testJan2018Simple(): void
     {
         global $INFO;
         $INFO[ 'namespace' ] = '';
@@ -25,7 +30,7 @@ class html_plugin_yearbox_test extends \DokuWikiTest
         self::assertSame($expectedHTML, $actual_html);
     }
 
-    public function test_2ndQuarter2018_noMondays()
+    public function test2ndQuarter2018NoMondays(): void
     {
         global $INFO;
         $INFO[ 'namespace' ] = '';
