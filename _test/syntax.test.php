@@ -13,6 +13,8 @@ class html_plugin_yearbox_test extends \DokuWikiTest
 
     public function test_jan2018_simple()
     {
+        global $INFO;
+        $INFO[ 'namespace' ] = '';
         $syntax = '{{yearbox>year=2018;months=1}}';
         $ins = p_get_instructions($syntax);
 
@@ -25,6 +27,8 @@ class html_plugin_yearbox_test extends \DokuWikiTest
 
     public function test_2ndQuarter2018_noMondays()
     {
+        global $INFO;
+        $INFO[ 'namespace' ] = '';
         $syntax = '{{yearbox>year=2018;months=4,5,6;weekdays=0,2,3,4,5,6}}';
         $ins = p_get_instructions($syntax);
 
